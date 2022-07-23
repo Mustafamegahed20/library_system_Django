@@ -12,6 +12,12 @@
     - display number of books in the library
     - display number of books which are sold or rented and avalible books in the library
     - display profits of sold and rented books
+    
+- project video
+
+![Library_system](https://user-images.githubusercontent.com/61358936/180621259-ba8a19dc-668e-48ad-84cc-2004fcf25422.gif)
+
+
 
 
 
