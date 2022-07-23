@@ -16,14 +16,27 @@ def index(request):
         'Category':Category.objects.all(),
         'books':Book.objects.all(),
         'form':BookForm(),
-        'Catform':CategoryForm()
+        'Catform':CategoryForm(),
+        'allbooks':Book.objects.filter(active=True).count(),
+        'avaliblebooks':Book.objects.filter(status='available').count(),
+        'soldbooks':Book.objects.filter(status='sold').count(),
+        'retalbooks':Book.objects.filter(status='retal').count(),
+
     }    
     return render(request,'pages/index.html',context) 
 
-def books(request): 
+def books(request):
+    search=Book.objects.all()
+    title= None 
+    if 'search_name' in request.GET:
+        title=request.GET["search_name"]
+        if title:
+            search=search.filter(title__icontains=title)
+     
     context={
         'Category':Category.objects.all(),
-        'books':Book.objects.all(),
+        'Catform':CategoryForm(),
+        'books':search,
     }     
     return render(request,'pages/books.html',context) 
 

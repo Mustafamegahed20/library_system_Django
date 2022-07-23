@@ -84,6 +84,43 @@
 
 <script>
 
+$(document).ready(function(){
+  var total = 0;
+  $(".totalprice").each(function(){
+    $(this).hide()
+    var salary =$(this).text()
+    total +=parseInt(salary)
+  });
+  
+  $("#totalsalarys").text($("#totalsalarys").text() + total)
+
+});
+var total1 = 0;
+$(".total_rental").each(function(){
+  $(this).hide()
+  var salary1 =$(this).text()
+  total1 +=parseInt(salary1)
+});
+$(".totalsalary").text(total1)
+$(".totalsalary").hide()
+
+
+var total2 = 0;
+$(".total_sold").each(function(){
+  $(this).hide()
+  var salary2 =$(this).text()
+  total2 +=parseInt(salary2)
+});
+$(".salarysold").text(total2)
+$(".salarysold").hide()
+
+
+
+$("#retal_period").keyup(function(){
+  $("#total_rental").val($("#retal_period").val()*$("#retal_price_day").val())
+
+});
+
 $("#catinput").hide()
 $("#addcat").click(function(){
   $("#catinput").show()
@@ -148,14 +185,14 @@ $(function () {
           backgroundColor: '#007bff',
           borderColor    : '#007bff',
           data           : [ 
-               '50',
+               $(".salarysold").text(),
           ]
         },
         {
           backgroundColor: '#ced4da',
           borderColor    : '#ced4da',
           data           : [ 
-                '30',
+          $(".totalsalary").text(),
           ]
         }
       ]
@@ -215,7 +252,7 @@ $(function () {
     type: 'pie',
     data: {
       datasets: [{
-        data: ['35','25','40'],
+        data: ['{{availablebooks}}','{{soldbooks}}','{{retalbooks}}'],
         backgroundColor :["#27c100","#f3545d","#fdaf4b"],
         borderWidth: 10,
         
