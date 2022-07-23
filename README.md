@@ -20,5 +20,5 @@
    - python manage.py makemigrations
    - python manage.py runserver
 
-#### After that you can open the website on http://127.0.0.1:8000/
-#### And if you want to access the admin page, you must run python manage.py createsuperuser first
+- After that you can open the website on http://127.0.0.1:8000/
+- And if you want to access the admin page, you must run python manage.py createsuperuser first
