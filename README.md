@@ -1,4 +1,4 @@
-﻿# # Build Library Management System | Python & Django
+﻿# Build Library Management System | Python & Django
  
 - In this project I build a Library System with Django Framework and Python.
  Django is one of the best frameworks for developing web applications that looks awesome 
