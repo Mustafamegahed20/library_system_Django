@@ -13,16 +13,6 @@
     - display number of books which are sold or rented and avalible books in the library
     - display profits of sold and rented books
     
-- project video
-
-
-
-https://user-images.githubusercontent.com/61358936/180656922-eeb4ac7e-5e47-4f7d-8dd1-b85eae18dfe7.mp4
-
-
-
-
-
 
 - You can run web app by executing these commands in its corresponding folder
    - python manage.py migrate
